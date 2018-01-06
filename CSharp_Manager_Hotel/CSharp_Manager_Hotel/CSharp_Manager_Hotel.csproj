@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{499236A8-0D4E-499D-9114-0E85379C6E20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharp_Manager_Hotel</RootNamespace>
+    <AssemblyName>CSharp_Manager_Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mysql.data %281%29">
+      <HintPath>C:\Users\Admin\Downloads\Compressed\mysql.data (1)\mysql.data (1).dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.web">
+      <HintPath>C:\Users\Admin\Downloads\Compressed\mysql.web\mysql.web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ChangePasswordController.cs" />
+    <Compile Include="Controller\DeviceController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\SystemController.cs" />
+    <Compile Include="DataManager\DBManager.cs" />
+    <Compile Include="DataManager\DBMySQLUtils.cs" />
+    <Compile Include="DataManager\DBUtils.cs" />
+    <Compile Include="Model\DeviceModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="View\ChangePasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChangePasswordView.Designer.cs">
+      <DependentUpon>ChangePasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\DashBoardController.cs" />
+    <Compile Include="View\DashBoardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashBoardView.Designer.cs">
+      <DependentUpon>DashBoardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashBoardViewInterface.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DeviceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeviceView.Designer.cs">
+      <DependentUpon>DeviceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoomView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomView.Designer.cs">
+      <DependentUpon>RoomView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServiceView.Designer.cs">
+      <DependentUpon>ServiceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AnalysisView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AnalysisView.Designer.cs">
+      <DependentUpon>AnalysisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HelpView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HelpView.Designer.cs">
+      <DependentUpon>HelpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManagerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ManagerView.Designer.cs">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RecordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RecordView.Designer.cs">
+      <DependentUpon>RecordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SystemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SystemView.Designer.cs">
+      <DependentUpon>SystemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ChangePasswordView.resx">
+      <DependentUpon>ChangePasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashBoardView.resx">
+      <DependentUpon>DashBoardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeviceView.resx">
+      <DependentUpon>DeviceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomView.resx">
+      <DependentUpon>RoomView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServiceView.resx">
+      <DependentUpon>ServiceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AnalysisView.resx">
+      <DependentUpon>AnalysisView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HelpView.resx">
+      <DependentUpon>HelpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ManagerView.resx">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RecordView.resx">
+      <DependentUpon>RecordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SystemView.resx">
+      <DependentUpon>SystemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
